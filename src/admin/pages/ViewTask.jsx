@@ -34,6 +34,7 @@ const ViewTask = () => {
             className="w-24 h-24 object-cover mx-auto rounded-md"
           />
           <h2 className="text-lg font-semibold mt-2">{task.app_name}</h2>
+          <h2 className="text-lg font-semibold mt-2">User: {task.username}</h2>
           <p
             className={`
                 font-bold text-lg
