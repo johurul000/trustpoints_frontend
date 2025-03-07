@@ -1,12 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { SiTrustpilot } from "react-icons/si"
+
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-lightBackground dark:bg-dark text-darkText dark:text-white flex flex-col">
       {/* Navbar */}
       <nav className="bg-card p-4 shadow-md flex justify-between items-center">
-        <div className="text-xl font-bold">RewardsHub</div>
+        <div className="text-xl font-bold flex flex-row items-center gap-2">
+        <NavLink>
+          <SiTrustpilot  className='h-10 w-10 text-lightHighlight dark:text-highlight'/>
+        </NavLink>
+        <span>TrustPoints</span>
+        </div>
         <div>
           <Link
             to="/login"
@@ -16,7 +23,7 @@ const Home = () => {
           </Link>
           <Link
             to="/register"
-            className="px-4 py-2 bg-lightHighlight hover:bg-lightHighlightHover rounded text-white transition"
+            className="px-4 py-2 bg-highlight hover:bg-highlightHover rounded text-white transition"
           >
             Get Started
           </Link>
@@ -26,7 +33,7 @@ const Home = () => {
       {/* Hero Section */}
       <header className="flex flex-col items-center justify-center flex-grow text-center px-4 mt-4">
         <img
-          src="https://source.unsplash.com/600x400/?rewards,money"
+          src="https://plus.unsplash.com/premium_photo-1729000546925-495988819fdd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Earn Rewards"
           className="w-full max-w-xl rounded-lg shadow-lg mb-6"
         />
@@ -50,7 +57,7 @@ const Home = () => {
         <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center p-6 border border-lightBorder dark:border-borderGray rounded-lg shadow-md bg-white dark:bg-dark">
             <img
-              src="https://source.unsplash.com/200x150/?task,checklist"
+              src="https://images.unsplash.com/photo-1521579498714-ff08ba4836ab?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Complete Tasks"
               className="mx-auto mb-4 rounded-lg"
             />
@@ -63,7 +70,7 @@ const Home = () => {
           </div>
           <div className="text-center p-6 border border-lightBorder dark:border-borderGray rounded-lg shadow-md bg-white dark:bg-dark">
             <img
-              src="https://source.unsplash.com/200x150/?wallet,money"
+              src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Earn Points"
               className="mx-auto mb-4 rounded-lg"
             />
@@ -76,7 +83,7 @@ const Home = () => {
           </div>
           <div className="text-center p-6 border border-lightBorder dark:border-borderGray rounded-lg shadow-md bg-white dark:bg-dark">
             <img
-              src="https://source.unsplash.com/200x150/?gift,shopping"
+              src="https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Redeem Rewards"
               className="mx-auto mb-4 rounded-lg"
             />
@@ -92,7 +99,7 @@ const Home = () => {
 
       {/* Footer */}
       <footer className="bg-card p-4 text-center text-grayText">
-        <p>&copy; {new Date().getFullYear()} RewardsHub. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} TrustPoints. All rights reserved.</p>
       </footer>
     </div>
   );
